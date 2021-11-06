@@ -81,13 +81,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
                                 <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 align-top">Login</button>
-                                <a href="{{ route('register') }}" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Sign up</a>
+                                <a href="{{ route('register') }}" type="button" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Sign up</a>
                             </div>
                         </form>
                         <div class="intro-x mt-10 xl:mt-24 text-gray-700 dark:text-gray-600 text-center xl:text-left">
                             By signin up, you agree to our 
                             <br>
-                            <a type="button" class="text-theme-1 dark:text-theme-10" href="javascript:void(0)">Terms and Conditions</a> & <a class="text-theme-1 dark:text-theme-10" href="javascript:void(0)">Privacy Policy</a> 
+                            <a class="text-theme-1 dark:text-theme-10" href="javascript:void(0)">Terms and Conditions</a> & <a class="text-theme-1 dark:text-theme-10" href="javascript:void(0)">Privacy Policy</a> 
                         </div>
                     </div>
                 </div>
