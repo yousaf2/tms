@@ -21,6 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{asset('assets')}}/dist/css/app.css" />
         <!-- END: CSS Assets-->
+        <script src="{{asset('assets')}}/dist/js/jquery-3.6.0.min.js"></script>
     </head>
     <!-- END: Head -->
     <body class="app">
@@ -1142,7 +1143,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <!-- <div class="text-xs text-theme-41 dark:text-gray-600">DevOps Engineer</div> -->
                                 </div>
                                 <div class="p-2">
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                    <a href="{{route('admin.profile')}}" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
                                     <!-- <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a> -->
                                     <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
                                     <!-- <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a> -->
@@ -1158,4 +1159,4 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!-- END: Account Menu -->
                 </div>
-                <div class="grid grid-cols-12 gap-6">
+                

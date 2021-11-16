@@ -22,6 +22,9 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'first_name',
+        'last_name',
+        'profile_image',
     ];
 
     /**
@@ -42,4 +45,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function find_user($id)
+    {    
+        $user =  User::find($id);
+        return $user;
+    }
+
+    public function update_user($data,$id)
+    {
+        $update_user = User::find($id)->update($data);
+        if($update_user){
+            return true;
+        }
+    }
 }
