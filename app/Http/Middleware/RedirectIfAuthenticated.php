@@ -32,7 +32,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null) {
         if (Auth::guard($guard)->check()) {
           $role = Auth::user()->role; 
-      
+          
             switch ($role) {
                 case '0':
                     return redirect('/admin');

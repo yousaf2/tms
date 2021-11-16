@@ -21,17 +21,4 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(){
-
-        return view('admin/dashboard');
-    }
-    public function team_lead_dashboard(){
-
-        return view('team_manager/dashboard');
-    }
-    public function team_member_dashboard(){
-
-        echo 'yes';die;
-        return view('team_member/dashboard');
-    }
 }

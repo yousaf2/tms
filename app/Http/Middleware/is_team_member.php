@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-
 use Auth;
 
 class is_team_member
@@ -18,8 +17,12 @@ class is_team_member
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::guard('web')->check() && Auth::guard('web')->user()->user_role !=1){
-            return redirect('/login');      
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }
+
+        if (Auth::user()->role != 1) {
+            return redirect()->route('login');
         }
         return $next($request);
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserRole extends Migration
+class AddRoleColumnToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddUserRole extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('user_role')->default(1)->after('email')->comment('0 for admin,1 for team member,2 for manager');
+            $table->integer('role')->after('email')->comment('0 for admin 1 for team and 2 for lead')->nullable();
         });
     }
 

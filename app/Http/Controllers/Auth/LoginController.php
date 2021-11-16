@@ -7,7 +7,6 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 
-
 class LoginController extends Controller
 {
     /*
@@ -28,26 +27,21 @@ class LoginController extends Controller
      *
      * @var string
      */
-    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/home';
 
-    public function redirectTo() {
-        $role = Auth::user()->user_role; 
-        switch ($role) {
-            case '0':
-                return '/admin';
-                break;
-            case '1':
-                return '/team_member';
-                break;
-            case '2':
-                return '/team_lead';
-                break;  
-            default:
-                return '/login'; 
-            break;
+    protected function redirectTo()
+    {
+        if (auth()->user()->role == 0) {
+            return 'admin';
         }
+        if (auth()->user()->role == 1) {
+            return 'team_member';
+        }
+        if (auth()->user()->role == 2) {
+            return 'team_lead';
+        }
+        return 'login';
     }
-
     /**
      * Create a new controller instance.
      *

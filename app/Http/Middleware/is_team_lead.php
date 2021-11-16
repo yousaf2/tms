@@ -17,8 +17,12 @@ class is_team_lead
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::guard('web')->check() && Auth::guard('web')->user()->user_role !=2){
-            return redirect('/login');      
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }
+
+        if (Auth::user()->role != 2) {
+            return redirect()->route('login');
         }
         return $next($request);
     }
